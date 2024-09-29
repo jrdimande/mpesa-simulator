@@ -26,7 +26,7 @@ class User:
             print(f"Saldo disponível {self.balance} Meticais")
 
     def consult(self):
-        message = f"Saldo atua: {self.balance}"
+        message = f"Saldo atual: {self.balance} Meticais"
         return message
 
 class Transition:
@@ -75,16 +75,17 @@ class Mpesa:
 
 # Example
 mpesa = Mpesa()
-mpesa.register_user("teddy", 847725920)
-mpesa.register_user("ian", 857725920)
+mpesa.register_user("george", 100)
+mpesa.register_user("zuck", 200)
 
-teddy = mpesa.find_user(847725920)
-teddy.deposit(1000)
-teddy.withdraw(500)
-mpesa.transfer(847725920, 857725920, 300)
-print(teddy.consult())
-print("=============================================================================================")
+george = mpesa.find_user(100)
+george.deposit(100)
+george.withdraw(50)
+mpesa.transfer(100, 200, 10)
+print(george.consult())
+print("=" * 50)
 
-ian = mpesa.find_user(857725920)
-print(felicina.consult())
-ian.withdraw(1000)
+zuck = mpesa.find_user(200)
+zuck.withdraw(10)
+mpesa.transfer(200, 100, 10)
+print(zuck.consult())
