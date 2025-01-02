@@ -7,6 +7,7 @@ class User:
         self.balance = balance
 
 
+
     def show_balance(self):
         print(f"Saldo atual: {self.balance} Meticais")
 
